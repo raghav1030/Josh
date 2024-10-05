@@ -1,0 +1,164 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  /* max-width: 1120px;
+  width: 100%; */
+ padding: 40px 0; 
+}
+
+.slide-container {
+  margin: 0 30px;
+  overflow: hidden;
+}
+
+.card {
+  background: #fff;
+/* Increased border-radius */
+  padding: 20px; /* Added padding */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .image-box {
+  height: 200px;
+  border-radius: 16px; /* Smooth round corners */
+  overflow: hidden; /* Ensure image doesn't overflow */
+}
+
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make the image cover the area */
+}
+
+.card .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  margin-top: 20px; /* Added margin to create space between content */
+}
+
+.card .profile-details img {
+
+border-radius: 50%;
+width: 84px;
+height: 77px;
+top: 219.49px;
+left: 846.65px;
+gap: 0px;
+opacity: 0px;
+}
+
+.profile-details .name {
+  padding-left: 12px;
+  font-size: 18px;
+  color: #2B2B2B;
+font-family: Inter;
+font-weight: 500;
+line-height: 22.25px;
+text-align: left;
+
+}
+
+.profile-details .job {
+  padding-left: 12px;
+  color: #767676; /* Lighter color for job */
+font-family: Inter;
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+
+  
+}
+
+.card .text-content {
+  margin-top: 20px;
+}
+
+.card .text-content h3 {
+  font-size: 20px;
+  color: #FFB400; /* Highlighted color for title */
+  margin-bottom: 8px; /* Space between title and description */
+}
+
+.card .text-content p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.swiper-navBtn {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #FFB400;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+}
+
+.card.swiper-slide {
+  width: 340px;
+  height: 327px; /* Allow height to adjust dynamically */
+  padding-left: 20px; /* Ensure padding for better spacing */
+  padding-right: 20px; /* Ensure padding for better spacing */
+  padding-top: 30px; /* Ensure padding for better spacing */
+  padding-bottom: 30px; /* Ensure padding for better spacing */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Consistent shadow */
+}
+
+.heading{
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22.25px;
+  text-align: left;
+}
+
+.content{
+  color: #767676;
+font-family: Inter;
+
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+
+}
+
+.swiper-dot{
+  padding-top: 12px;
+}
