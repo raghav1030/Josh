@@ -95,11 +95,13 @@
   z-index: 2;
 }
 .location-icon {
-  position: absolute;
-  top: 25.2px;
-  left: 166.2px;
-  width: 40.3px;
-  height: 40.3px;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--yellow);
 }
 .location,
 .location-item {
@@ -178,7 +180,6 @@
   flex-direction: column;
   padding: 70.4px 0 0;
 }
-.location1,
 .map-details {
   flex-direction: row;
   gap: var(--gap-5xs);
@@ -191,24 +192,20 @@
   align-items: flex-end;
   justify-content: space-between;
   padding: var(--padding-6xl-1) var(--padding-6xl) 15.1px;
-  box-sizing: border-box;
-  max-width: 100%;
-  gap: var(--gap-xl);
-  z-index: 3;
-  text-align: left;
+  /* box-sizing: border-box; */
+  width: 100%;
+  /* gap: var(--gap-xl); */
+  /* z-index: 3; */
+  /* text-align: left; */
   font-size: var(--h4-18-size);
 }
+
 .contact-options {
-  position: relative;
-  max-width: 100%;
-}
-.contact-options {
-  align-self: stretch;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  text-align: right;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   font-size: var(--paragraph-progress-15-size);
 }
 .email,
@@ -389,46 +386,51 @@
   padding: var(--padding-6xl-1) var(--padding-6xl) 16.1px;
   box-sizing: border-box;
 }
-.contact-options-parent,
-.form-fields-container,
 .mobile {
   display: flex;
-  justify-content: flex-start;
-  max-width: 100%;
+  justify-content: center;
 }
 .contact-options-parent {
-  width: 372.7px;
   flex-direction: column;
-  align-items: flex-start;
-  gap: var(--gap-lg-1);
-}
+  align-items: center;
+  justify-content: center;
+  background-color: #767676;
+  height: 1000px;
+  gap: 2rem;
+  }
 .form-fields-container {
-  align-self: stretch;
-  flex-direction: row;
-  align-items: flex-end;
-  gap: 25.6px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 2rem;
+  /* background-color: #767676; */
   font-size: var(--h4-18-size);
   color: var(--paragraph-font);
 }
-.form-container,
 .form-container-wrapper {
   display: flex;
-  align-items: flex-start;
-  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .form-container {
-  width: 1243.7px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: var(--gap-26xl);
+  gap: 1rem;
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
 .form-container-wrapper {
-  align-self: stretch;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0 var(--padding-xl) var(--padding-41xl);
-  box-sizing: border-box;
-  text-align: left;
+  /* align-self: stretch; */
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  /* padding: 0 var(--padding-xl) var(--padding-41xl); */
+  /* box-sizing: border-box; */
+  /* text-align: left; */
   font-size: var(--h2-32-size);
   color: var(--black);
   font-family: var(--paragraph-progress-15);
@@ -630,4 +632,66 @@ textarea {
   font-size: 14px;
   font-weight: 600;
   line-height: 16.94px;
+}
+
+
+.location-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Container */
+.location-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon-image {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Details Flexbox */
+.location-details {
+  display: flex;
+  width: 100%;
+  /* background-color: aqua; */
+  justify-content: space-between;
+}
+
+/* Left Column (Keys) */
+.details-left h3 {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Right Column (Values) */
+.details-right p {
+  text-align: right;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Optional Styling for Mobile Responsiveness */
+@media (max-width: 600px) {
+  .location-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .details-right p {
+    text-align: left;
+  }
 }
